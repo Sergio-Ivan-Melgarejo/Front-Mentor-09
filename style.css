@@ -14,7 +14,7 @@
 body{
     font-size: 14px;
     font-family: 'Red Hat Text', sans-serif;
-    background: linear-gradient(var(--VeryDarkBlue-1) 0%, var(--VeryDarkBlue-2) 40%, var(--SoftRed) 1000%);
+    background: linear-gradient(180deg, var(--VeryDarkBlue-2) 40%, var(--SoftRed) 800%);
     height: 100vh;
     overflow: hidden;
     transition: font-size 350ms;
@@ -24,6 +24,7 @@ body{
     background-image: url(images/bg-stars.svg);
     animation: background 100s infinite;
     height: 80%;
+    border: 1px solid transparent;
 }
 
 .img-moutains{
@@ -65,8 +66,10 @@ body{
     border-radius: 5px;
     position: relative;
     width: 20%;
+    box-shadow: 0 10px 0 var(--VeryDarkBlue-2);
 }
 
+/*circles_______*/
 .box::before{
     content: "";
     width: .6em;
@@ -91,11 +94,24 @@ body{
     border-radius: 50%;
 }
 
+/*center line*/
+.box::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--VeryDarkBlue-1);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    opacity: .2;
+}
+
 .numer{
     color: var(--SoftRed);
-    font-size: 10vw;
+    font-size: 12vw;
     margin: 0;
-    padding: .3em 0;
+    padding: .2em 0;
 }
 
 .date{
@@ -126,7 +142,7 @@ body{
 .fab{
     color: var(--GrayishBlue);
     margin: 10px;
-    font-size: 1.2em;
+    font-size: 2.2em;
     transition: color 350ms;
 }
 
@@ -135,8 +151,13 @@ body{
 }
 
 .link{
-    opacity: .7;
+    opacity: .3;
     color: var(--GrayishBlue);
+    transition: opacity 350ms;
+}
+
+.link:hover{
+    opacity: .9;
 }
 
 .link__a{
@@ -148,18 +169,21 @@ body{
     color: var(--SoftRed);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     body{
         font-size: 20px;
     }
     .numer{
-        font-size: 4em;
+        font-size: 5em;
     } 
     .title{
         font-size: 1.3em;
     }
     .text, .box{
         width: 16%;
+    }
+    .fab{
+        font-size: 1.5em;
     }
 }
 
@@ -177,4 +201,43 @@ body{
         background-position: -100vw;
     }
 }
+
+@keyframes change {
+    from{
+        transform: rotateX(-180deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+} 
 /* --700 */
+
+.top-box{
+    width: 100%;
+    height: 50%;
+    background: var(--DarkDesaturatedBlue-0);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    animation: flipcardTop 2s infinite;
+    
+}
+@keyframes flipcardTop {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes flipcard {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
