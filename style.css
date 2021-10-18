@@ -15,8 +15,8 @@ body{
     font-size: 14px;
     font-family: 'Red Hat Text', sans-serif;
     background: linear-gradient(var(--VeryDarkBlue-1) 0%, var(--VeryDarkBlue-2) 40%, var(--SoftRed) 1000%);
-    overflow: hidden;
     height: 100vh;
+    overflow: hidden;
     transition: font-size 350ms;
 }
 /*backgorun_____*/
@@ -29,6 +29,7 @@ body{
 .img-moutains{
     position: absolute;
     bottom: 0;
+    overflow: hidden;
 } 
 /*_________________*/
 
@@ -37,26 +38,25 @@ body{
     max-width: 1000px;
     margin: auto;
     text-align: center;
-    border: 1px solid red;
+    height: 90vh;
+    position: relative;
 }
 
 .title{
-    margin: 20vh 0 10vh;
+    margin: 15vh 0 12vh;
     color: var(--White);
     letter-spacing: .2em;
     text-transform: uppercase;
-    font-size: 1.6em;
+    font-size: 3vw;
     line-height: 1.4em;
-
 }
 
 /*hours________*/
 .clock, .date{
     display: flex;
     justify-content: center;
-    padding: 0 20px;
     margin: auto;
-    gap: 2em;
+    gap: 1em;
 }
 
 .box{
@@ -64,7 +64,7 @@ body{
     max-width: 20%;
     border-radius: 5px;
     position: relative;
-    width: 15%;
+    width: 20%;
 }
 
 .box::before{
@@ -93,9 +93,9 @@ body{
 
 .numer{
     color: var(--SoftRed);
-    font-size: 2em;
+    font-size: 10vw;
     margin: 0;
-    padding: .5em 0;
+    padding: .3em 0;
 }
 
 .date{
@@ -109,27 +109,58 @@ body{
     text-transform: uppercase;
     letter-spacing: .3em;
     opacity: .8;
-    width: 15%;
+    width: 20%;
 }
 
-@media screen and (min-width: 500px) {
+/*footer____*/
+.attribution{
+    position: absolute;
+    bottom: 10vh;
+    width: 100%;
+}
+
+.social-media{
+    padding: 20px;
+}
+
+.fab{
+    color: var(--GrayishBlue);
+    margin: 10px;
+    font-size: 1.2em;
+    transition: color 350ms;
+}
+
+.fab:hover{
+    color: var(--SoftRed);
+}
+
+.link{
+    opacity: .7;
+    color: var(--GrayishBlue);
+}
+
+.link__a{
+    color: var(--DarkDesaturatedBlue);
+    transition: color 350ms;
+}
+
+.link__a:hover{
+    color: var(--SoftRed);
+}
+
+@media screen and (min-width: 800px) {
     body{
         font-size: 20px;
     }
     .numer{
-        font-size: 2.8em;
+        font-size: 4em;
     } 
-}
-@media screen and (min-width: 1440px) {
-    
-}
-
-
-.attribution { 
-    font-size: 11px;
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+    .title{
+        font-size: 1.3em;
+    }
+    .text, .box{
+        width: 16%;
+    }
 }
 
 @media screen and (min-width: 1450px){
@@ -137,6 +168,7 @@ body{
        width: 100%;
    }
 }
+
 @keyframes background {
     from{
         background-position: 0px;
