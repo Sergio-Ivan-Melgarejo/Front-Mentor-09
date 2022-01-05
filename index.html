@@ -15,9 +15,9 @@
   <!--Font Awesome-->
   <script src="https://kit.fontawesome.com/757be4cedc.js" crossorigin="anonymous"></script>
   <!-- normalize -->
-  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="./CSS/normalize.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
 
@@ -41,8 +41,11 @@
           <span class="text">Minutes</span>
         </div>
         <div class="box">
-          <p class="numer numer-second">00</p>
-          <p class="numer numer-top">01</p>
+          <div class="seconds">
+            <p class="numer second-back">11</p>
+            <p class="numer second-front">00</p>
+            <div class="number-line"></div>
+          </div>
           <span class="text">Seconds</span>
         </div>
       </div>
@@ -63,6 +66,6 @@
   </div>
 
   <!-- javascript -->
-  <script src="code.js"></script>
+  <script src="./JS/main.js"></script>
 </body>
 </html>
