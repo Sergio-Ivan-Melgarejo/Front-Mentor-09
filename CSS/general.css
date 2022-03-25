@@ -1,0 +1,56 @@
+:root{
+    /* ## Colors */ 
+    /* ### Primary */
+    --GrayishBlue: hsl(237, 18%, 59%);
+    --SoftRed: hsl(345, 95%, 68%);
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --DarkDesaturatedBlue: hsl(236, 21%, 26%);
+    --DarkDesaturatedBlue-0:  #2c2c46;
+    --VeryDarkBlue-1: hsl(235, 16%, 14%);
+    --VeryDarkBlue-2: hsl(234, 17%, 12%); /*(mostly black) */
+
+    --border-radius:5px;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Red Hat Text', sans-serif;
+    background: linear-gradient(180deg, var(--VeryDarkBlue-2) 40%, var(--SoftRed) 800%);
+    height: 100vh;
+    overflow: hidden;
+    transition: font-size 350ms;
+}
+
+/*background_____*/
+
+.background{
+    background-image: url(../images/bg-stars.svg);
+    animation: background-img 100s infinite;
+    height: 80%;
+    background-position: top;
+}
+
+@keyframes background-img {
+    from{
+        background-position: 0px;
+    }    
+    to{
+        background-position: -100vw;
+    }
+}
+
+.img-moutains{
+    position: absolute;
+    bottom: 0;
+} 
+
+@media screen and (min-width: 1440px){
+   .img-moutains{
+       width: 100%;
+   }
+}

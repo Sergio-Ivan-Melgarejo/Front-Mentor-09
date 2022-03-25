@@ -1,0 +1,42 @@
+.attribution{
+    align-self: end;
+    bottom: 10vh;
+    width: 100%;
+}
+
+.social-media{
+    padding: 20px;
+    position: relative;
+}
+
+.social-media a{
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.fab{
+    color: var(--GrayishBlue);
+    margin: 15px;
+    font-size: clamp(2em, 5vw,2.5em);
+    transition: color 350ms;
+    position: relative;
+}
+
+.fab:hover{
+    color: var(--SoftRed);
+}
+
+.link{
+    color: var(--GrayishBlue);
+    transition: opacity 350ms;
+    position: relative;
+}
+
+.link__a{
+    color: var(--DarkDesaturatedBlue);
+    transition: color 350ms;
+}
+
+.link__a:hover{
+    color: var(--SoftRed);
+}
